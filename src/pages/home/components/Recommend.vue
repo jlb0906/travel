@@ -2,7 +2,7 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
         <img class="item-img" :src="item.imgUrl" alt="" srcset="">
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -17,29 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [
-        {
-          id: '001',
-          imgUrl: '//img1.qunarzz.com/sight/p0/1702/db/dbc8f6cf051b3803a3.water.jpg_256x160_0cff5839.jpg',
-          title: '龙虎山',
-          desc: '神秘的古越族文明，体验绝美的自然风光神秘的古越族文明'
-        },
-        {
-          id: '002',
-          imgUrl: '//img1.qunarzz.com/sight/p0/1702/db/dbc8f6cf051b3803a3.water.jpg_256x160_0cff5839.jpg',
-          title: '龙虎山',
-          desc: '神秘的古越族文明，体验绝美的自然风光神秘的古越族文明'
-        },
-        {
-          id: '003',
-          imgUrl: '//img1.qunarzz.com/sight/p0/1702/db/dbc8f6cf051b3803a3.water.jpg_256x160_0cff5839.jpg',
-          title: '龙虎山',
-          desc: '神秘的古越族文明，体验绝美的自然风光神秘的古越族文明'
-        }
-      ]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
