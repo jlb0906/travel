@@ -24,7 +24,7 @@ export default {
     swiperList: [
       {
         id: '001',
-        imgUrl: '//imgs.qunarzz.com/p/tts0/1805/75/b55a998cd1cbac02.jpg_r_480x320x95_951a0d9c.jpg'
+        imgUrl: '//imgs.qunarzz.com/vc/6d/9f/35/b8ad5468f73fd60ec0ced086f6.jpg_92.jpg'
       },
       {
         id: '002',
