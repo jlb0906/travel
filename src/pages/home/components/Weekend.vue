@@ -4,7 +4,7 @@
     <ul>
       <li class="item border-bottom" v-for="item of list" :key="item.id">
         <div class="item-img-wrapper">
-          <img class="item-img" :src="item.imgUrl" alt="" srcset="">
+          <img class="item-img" :src="item.imgUrl" alt srcset />
         </div>
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -26,27 +26,39 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="stylus" scoped>
-@import '~@/assets/styles/mixins.style'
-  .title
-    line-height .8rem
-    background #eee
-    text-indent .2rem
-  .item
-    .item-img-wrapper
-       overflow hidden
-       height 0
-       padding-bottom 37.08%
-    .item-img
-      width 100%
-    .item-info
-      padding .1rem
-      .item-title
-        line-height .54rem
-        font-size .32rem
-        ellipsis()
-      .item-desc
-        line-height .4rem
-        color #ccc
-        ellipsis()
+@import '~@/assets/styles/mixins.style';
 
+.title {
+  line-height: 0.8rem;
+  background: #eee;
+  text-indent: 0.2rem;
+}
+
+.item {
+  .item-img-wrapper {
+    overflow: hidden;
+    height: 0;
+    padding-bottom: 37.08%;
+  }
+
+  .item-img {
+    width: 100%;
+  }
+
+  .item-info {
+    padding: 0.1rem;
+
+    .item-title {
+      line-height: 0.54rem;
+      font-size: 0.32rem;
+      ellipsis();
+    }
+
+    .item-desc {
+      line-height: 0.4rem;
+      color: #ccc;
+      ellipsis();
+    }
+  }
+}
 </style>
